@@ -1,0 +1,27 @@
+<h2>The stages available in your city</h2>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        <% @stages.each do |stage| %>
+          <div class="col-sm-6">
+            <div class="card-fond">
+               <div class="card image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://unsplash.it/200/200')">
+                <div class="card-category"><%= stage.name %></div>
+                </div>
+                <div class="card-description">
+                  <p><%= stage.address %>, Capacity: <%= stage.capacity %> people</p>
+                  <p>$ <%= stage.price %></p>
+                </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="map" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.parisdigest.com/photos/paris_map_arrondissements.jpg')">
+      </div>
+    </div>
+  </div>
+</div>

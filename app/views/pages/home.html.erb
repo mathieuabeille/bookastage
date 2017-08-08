@@ -1,2 +1,36 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="header">
+  <div class="search">
+    <h1>Booking a stage has never been so easy !</h1>
+    <div class="home-form">
+      <input type="text" class="form-control" placeholder="City">
+      <input type="text" class="datepicker form-control" placeholder="Date">
+      <button type="button" class="btn btn-primary">Search</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <div class="feature">
+        <%= image_tag("drum-set.png", size: "100x100", :alt => "rss feed")%>
+        <h3>Easy Booking</h3>
+        <p>It has never been so easy for a band to organize a show</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="feature">
+        <%= image_tag("management.png", size: "100x100", :alt => "rss feed")%>
+        <h3>Easy Management</h3>
+        <p>It has never been so easy to manage a stage</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="feature">
+        <%= image_tag("heavy-metal", size: "100x100", :alt => "rss feed")%>
+        <h3>Enjoy the show</h3>
+        <p>It has never been so easy to have a good time </p>
+      </div>
+    </div>
+  </div>
+</div>

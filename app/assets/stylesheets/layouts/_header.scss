@@ -1,0 +1,17 @@
+.header {
+  min-height: calc(100vh - 70px );
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), image-url('header.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .search{
+  width: 600px;
+  text-align: center;
+}
+
+.header h1, h2, h3, h4, p {
+  color: $light-gray;
+  margin-bottom: 70px
+}

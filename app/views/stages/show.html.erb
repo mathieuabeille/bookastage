@@ -1,7 +1,29 @@
-
 <div class="container-fluid">
-  <div class="col-sm-12">
-  <div class="card salle" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://rocket-ticket.com//img/cms/Salle/olympia_paris_salle.jpg')">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card salle" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://rocket-ticket.com//img/cms/Salle/olympia_paris_salle.jpg')">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+      <div class="card_details">
+        <h4><%= @stage.name %></h4>
+        <p><%= @stage.address %></p>
+        <p>capacity:<%= @stage.capacity %></p>
+        <p img = "money_480.png">$<%= @stage.price %>per night</p>
+        <p>Salle de concert parmi les plus prestigieuses de la ville</p>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="booking">
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 

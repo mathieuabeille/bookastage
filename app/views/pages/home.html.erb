@@ -1,11 +1,13 @@
 <div class="header">
   <div class="search">
     <h1>Booking a stage has never been so easy !</h1>
-    <div class="home-form">
-      <input type="text" class="form-control" placeholder="City">
-      <input type="text" class="datepicker form-control" placeholder="Date">
-      <button type="button" href="http://bookastage.herokuapp.com/stages" class="btn btn-primary">Search</button>
-    </div>
+    <form action="<%= stages_path %>" method="get">
+      <div class="home-form">
+        <input type="text" class="form-control" placeholder="City" name="city">
+        <input type="text" class="datepicker form-control" placeholder="Date" name="date">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </form>
   </div>
 </div>
 

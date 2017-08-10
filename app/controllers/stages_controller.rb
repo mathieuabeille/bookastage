@@ -1,6 +1,7 @@
 class StagesController < ApplicationController
   def index
     @city = params[:city]
+    @date = params[:date]
     @stages = Stage.where("city ILIKE ?","%#{params[:city]}%").where.not(latitude: nil, longitude: nil)
     # @stages = Stage.where.not(latitude: nil, longitude: nil)
     @hash = Gmaps4rails.build_markers(@stages) do |stage, marker|
@@ -17,5 +18,6 @@ class StagesController < ApplicationController
   # GET /stages/:id
   def show
     @stage = Stage.find(params[:id])
+    @date = params[:date]
   end
 end

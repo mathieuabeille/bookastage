@@ -1,4 +1,4 @@
-<h2>The stages available in your city</h2>
+<h2>Stages available in <%= @city.capitalize %> for <%= @date %></h2>
 
 <div class="container-fluid">
   <div class="row">
@@ -14,7 +14,7 @@
                 <p><%= stage.city %>, Capacity: <%= stage.capacity %> people</p>
                 <p>$ <%= stage.price %></p>
               </div>
-              <%= link_to '', stage_path(stage), class: 'card-link' %>
+              <%= link_to '', stage_path(stage, date: params[:date]), class: 'card-link' %>
             </div>
           </div>
         <% end %>

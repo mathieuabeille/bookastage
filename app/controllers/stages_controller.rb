@@ -15,9 +15,39 @@ class StagesController < ApplicationController
     @stage = Stage.new
   end
 
+  def create
+    @stage = Stage.new(stage_params)
+    @stage.user = current_user
+    if @stage.save
+      redirect_to stage_path(@stage)
+    else
+      render new
+    end
+  end
+
+   def edit
+    @stage = Stage.find(params[:id])
+  end
+
+  def update
+    @stage = Stage.find(params[:id])
+    @stage.user = current_user
+    if @stage.save
+      redirect_to stage_path(@stage)
+    else
+      render new
+    end
+  end
+
   # GET /stages/:id
   def show
     @stage = Stage.find(params[:id])
     @date = params[:date]
+  end
+
+  private
+
+  def stage_params
+    params.require(:stage).permit(:name, :city, :description, :capacity, :price, :address)
   end
 end

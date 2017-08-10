@@ -1,0 +1,24 @@
+<div id="padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3 boxlog">
+        <%= simple_form_for(@stage) do |f| %>
+            <div class="form-inputs">
+              <%= f.input :name, required: false, autofocus: true %>
+              <%= f.input :city %>
+              <%= f.input :description %>
+              <%= f.input :capacity %>
+              <%= f.input :price %>
+              <%= f.input :address %>
+            </div>
+
+            <div class="form-actions">
+              <%= f.button :submit, "Create a stage" %>
+            </div>
+        <% end %>
+        </br>
+      </div>
+    </div>
+  </div>
+</br>
+</div>

@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def create
-    @booking = Bookings.new(booking_params)
+    @booking = Booking.new(booking_params)
     # we need `restaurant_id` to asssociate review with corresponding restaurant
     @stage = Stage.find(params[:stage_id])
     @booking.stage = @stage

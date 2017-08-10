@@ -5,6 +5,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-8">
       <div class="card_details">
+       <img src='https://kitt.lewagon.com/placeholder/users/alex-felix' class="avatar-large"/>
         <h4><%= @stage.name %></h4>
         <p><%= @stage.address %></p>
         <p><i class="fa fa-users img_users" aria-hidden="true">   </i> capacity :<%= @stage.capacity %></p>
@@ -21,8 +22,9 @@
         <form class="booking-form" action="<%= stages_path %>" method="get">
           <label for="Night of the Show" class = "label-booking">Check-In</label>
           <input type="text" class="datepicker form-control" placeholder="Night of the Show" name="check-in">
-          <input type= "text" class="price-night-calculate" placeholder="price" name="price">
-          <input type= "text" class="total-price" placeholder="$1o.ooo" name="total">
+          <input type= "text" class="price" placeholder="number of nights" name="price">
+          <hr>
+          <input type= "text" class="price" placeholder="Total : $10.000" name="total">
           <button type="submit" class="btn btn-primary">Book</button>
         </form>
       </div>

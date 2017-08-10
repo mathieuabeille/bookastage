@@ -1,9 +1,18 @@
 h4{
   color: $green;
+  padding: 10px 0px 0px 10px;
+}
+
+h5{
+  color: white;
+  justify-text: center;
+  text-align: center;
+  padding: 10px 0px 0px 10px
 }
 
 p{
-  color: black;
+  color: #4A4A4A;
+  padding-left: 10px;
 }
 .card_details{
   height: 400px;
@@ -11,7 +20,71 @@ p{
 }
 
 .booking{
-  display: flex;
   height: 300px;
   background: white;
 }
+
+.add_tour{
+  background: #4A4A4A;
+  height: 50px;
+}
+
+.img_calendar{
+  color: white;
+
+}
+
+.img_money{
+  color: $green;
+}
+
+.img_users{
+  color: $green;
+}
+
+.small_stage_description{
+  padding-top: 30px
+}
+
+.booking-form {
+  padding: 5px;
+
+  label {
+    margin: 0px 0px 10px 30px;
+    border-radius: 4px;
+  }
+
+  input {
+    margin: 0px 0px 10px 0px;
+    border-radius: 4px;
+    display: block;
+    width: 70%;
+    height: 39px;
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 1.428571429;
+    color: #000000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    margin: 0px 0px 0px 30px;
+  }
+}
+
+.label-booking {
+  display: inline;
+  color: #4A4A4A;
+  align-text:center;
+  margin-bottom: 5px;
+}
+
+.booking button {
+  width: 100%;
+  margin: 15px 0px;
+}
+
+.booking-button{
+  display: flex;
+  justify-content: center;
+}
+

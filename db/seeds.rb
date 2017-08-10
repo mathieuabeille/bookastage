@@ -23,6 +23,7 @@ stages_attributes = [
   {
     name: "Alhambra",
     address: "21 rue Yves Toudic, 75010 Paris",
+    city: "Paris",
     price: 10000,
     capacity: 1996,
     user: user

@@ -1,24 +1,30 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="card salle" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://rocket-ticket.com//img/cms/Salle/olympia_paris_salle.jpg')">
-      </div>
-    </div>
-  </div>
+<div class="card salle" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://rocket-ticket.com//img/cms/Salle/olympia_paris_salle.jpg')">
+</div>
 
+<div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-8">
       <div class="card_details">
         <h4><%= @stage.name %></h4>
         <p><%= @stage.address %></p>
-        <p>capacity:<%= @stage.capacity %></p>
-        <p img = "money_480.png">$<%= @stage.price %>per night</p>
-        <p>Salle de concert parmi les plus prestigieuses de la ville</p>
+        <p><i class="fa fa-users img_users" aria-hidden="true">   </i> capacity :<%= @stage.capacity %></p>
+        <p> <i class="fa fa-money img_money" aria-hidden="true"></i> $<%= @stage.price %> per night</p>
+        <p class="small_stage_description">Une des salles de concert parmi les plus prestigieuses de la capitale. La salle de concert est aussi célèbre que les musiciens qui sont venus y faire un spectacle!</p>
       </div>
     </div>
 
     <div class="col-xs-12 col-sm-4">
       <div class="booking">
+        <div class="add_tour">
+          <h5> Add on my tour <i class="fa fa-calendar-plus-o img_calendar" aria-hidden="true"></i></h5>
+        </div>
+        <form class="booking-form" action="<%= stages_path %>" method="get">
+          <label for="Night of the Show" class = "label-booking">Check-In</label>
+          <input type="text" class="datepicker form-control" placeholder="Night of the Show" name="check-in">
+          <input type= "text" class="price-night-calculate" placeholder="price" name="price">
+          <input type= "text" class="total-price" placeholder="$1o.ooo" name="total">
+          <button type="submit" class="btn btn-primary">Book</button>
+        </form>
       </div>
     </div>
   </div>

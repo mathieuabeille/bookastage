@@ -17,6 +17,7 @@ p{
 .card_details{
   height: 400px;
   background: white;
+  position: relative;
 }
 
 .booking{
@@ -46,16 +47,25 @@ p{
   padding-top: 30px
 }
 
+.avatar-large {
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top:10px;
+  right:10px;
+}
+
 .booking-form {
   padding: 5px;
 
   label {
     margin: 0px 0px 10px 30px;
     border-radius: 4px;
+    display: inline-block;
   }
 
-  input {
-    margin: 0px 0px 10px 0px;
+  input{
+    margin: 0px 0px 20px 0px;
     border-radius: 4px;
     display: block;
     width: 70%;
@@ -67,7 +77,26 @@ p{
     background-color: #fff;
     background-image: none;
     border: 1px solid #ccc;
+    margin: 0px 0px 5px 30px;
+  }
+
+  .price{
+    border-radius: 4px;
+    display: block;
+    width: 70%;
+    height: 39px;
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 1.428571429;
+    color: #000000;
+    background-color: #fff;
+    background-image: none;
+    border: none;
     margin: 0px 0px 0px 30px;
+  }
+
+  hr{
+    margin: 0px 30px;
   }
 }
 

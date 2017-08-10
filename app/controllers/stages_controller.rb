@@ -19,5 +19,6 @@ class StagesController < ApplicationController
   def show
     @stage = Stage.find(params[:id])
     @date = params[:date]
+    @booking = Booking.new(date: @date)
   end
 end

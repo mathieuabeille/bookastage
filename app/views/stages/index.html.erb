@@ -1,4 +1,22 @@
-<h2>Stages available in <%= @city.capitalize %> for <%= @date %></h2>
+
+<div id="padding">
+<% if @city.present? %>
+
+   <h4>Stages available in <%= @city.capitalize %> for <%= @date %></h4>
+  <% else %>
+    <h4>Pick a date</h4>
+<% end %>
+
+
+<form action="<%= stages_path %>" method="get">
+      <div class="home-form">
+        <input type="text" class="form-control" placeholder="City" name="city">
+        <input type="text" class="datepicker form-control" placeholder="Date" name="date">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </form>
+</div>
+</br>
 
 <div class="container-fluid">
   <div class="row">
@@ -42,3 +60,4 @@
     </div>
   </div>
 </div>
+</br>

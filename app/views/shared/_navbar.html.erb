@@ -17,6 +17,7 @@
       <%= link_to "My bookings", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
 
+
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
@@ -25,11 +26,11 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
-                <!--   --> <%= t(".profile", default: "Stage Admin") %>
+                <!--   --> <%= t(".profile", default: "My stages") %>
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to new_stage_path do %>
                 <!-- <i class="fa fa-user"></i> --> <%= t(".profile", default: "Add a stage") %>
               <% end %>
             </li>

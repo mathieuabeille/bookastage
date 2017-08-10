@@ -1,0 +1,17 @@
+.card-singer {
+  height: 400px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center 70%;
+  color: white;
+  position: relative;
+}
+
+.card-description-singer {
+  position: absolute;
+  text-align:center;
+
+  h1{
+    text-align: center;
+  }
+}

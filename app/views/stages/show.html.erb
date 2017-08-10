@@ -5,11 +5,10 @@
   <div class="row">
     <div class="col-xs-12 col-sm-8">
       <div class="card_details">
-       <img src='https://kitt.lewagon.com/placeholder/users/alex-felix' class="avatar-large"/>
         <h4><%= @stage.name %></h4>
         <p><%= @stage.address %></p>
         <p><i class="fa fa-users img_users" aria-hidden="true">   </i> capacity :<%= @stage.capacity %></p>
-        <p> <i class="fa fa-money img_money" aria-hidden="true"></i> $<%= @stage.price %> per night</p>
+        <p> <i class="fa fa-money img_money" aria-hidden="true"></i> €<%= @stage.price %> per night</p>
         <p class="small_stage_description">Une des salles de concert parmi les plus prestigieuses de la capitale. La salle de concert est aussi célèbre que les musiciens qui sont venus y faire un spectacle!</p>
       </div>
     </div>
@@ -19,14 +18,13 @@
         <div class="add_tour">
           <h5> Add on my tour <i class="fa fa-calendar-plus-o img_calendar" aria-hidden="true"></i></h5>
         </div>
-        <form class="booking-form" action="<%= stages_path %>" method="get">
+
+        <%= simple_form_for([@stage, @booking], html: { class: 'booking-form' }) do |f| %>
           <label for="Night of the Show" class = "label-booking">Check-In</label>
-          <input type="text" class="datepicker form-control" placeholder="Night of the Show" name="check-in">
-          <input type= "text" class="price" placeholder="number of nights" name="price">
-          <hr>
-          <input type= "text" class="price" placeholder="Total : $10.000" name="total">
-          <button type="submit" class="btn btn-primary">Book</button>
-        </form>
+          <%= f.input_field :date, as: :string, class: 'datepicker form-control', placeholder: 'Night of the Show' %>
+          <p> € <%= @stage.price %> x 1 night </p>
+          <%= f.button :button %>
+        <% end %>
       </div>
     </div>
   </div>

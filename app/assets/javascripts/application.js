@@ -5,9 +5,7 @@
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
-// app/assets/javascripts/application.js
 //= require underscore
 //= require gmaps/google
 
 //= require_tree .
-

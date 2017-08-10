@@ -13,22 +13,27 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
+      <%= link_to "Book a stage", stages_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "My bookings", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
+          <span class="navbar-wagon-item navbar-wagon-link"><%= current_user.first_name %></span>
           <%= image_tag current_user.avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <!--   --> <%= t(".profile", default: "Stage Admin") %>
               <% end %>
             </li>
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
+                <!-- <i class="fa fa-user"></i> --> <%= t(".profile", default: "Add a stage") %>
               <% end %>
             </li>
+
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
@@ -39,9 +44,10 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
+      <%= link_to "Book a stage", stages_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Rent a stage", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
-
   </div>
 
   <!-- Dropdown list appearing on mobile only -->

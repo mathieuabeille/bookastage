@@ -1,4 +1,6 @@
 class StagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @city = params[:city]
     @date = params[:date]

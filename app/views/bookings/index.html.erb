@@ -1,5 +1,32 @@
 <div class="card-singer" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/92080/pexels-photo-92080.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');">
-  <div class="card-description-singer">
-    <h1>My Bookings</h1>
+  <h1>My Bookings</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-xs-12">
+      <div class="row">
+          <% @bookings.each do |booking| %>
+            <div class="card-back">
+              <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://rocket-ticket.com//img/cms/Salle/olympia_paris_salle.jpg')">
+                  <div>
+                    <h4><%= booking.stage.name %></h4>
+                    <p><%= booking.stage.address %></p>
+                  </div>
+              </div>
+              <div class="stage-bk-det">
+                <div>
+                  <p> Night of the show:</p>
+                  <p><%= booking.date.strftime("%A %-d %B of %Y") %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
   </div>
 </div>
+
+
+
+

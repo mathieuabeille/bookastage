@@ -1,10 +1,12 @@
 class BookingsController < ApplicationController
   def create
-    @booking = Bookings.new(booking_params)
+    @booking = Booking.new(booking_params)
     # we need `restaurant_id` to asssociate review with corresponding restaurant
     @stage = Stage.find(params[:stage_id])
     @booking.stage = @stage
     @booking.user = current_user
+    @date = Stage.find(params[:date])
+    @booking.date = @date
 
     if @booking.save
       redirect_to root_path, notice: 'Booking created'

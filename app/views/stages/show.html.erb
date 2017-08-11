@@ -11,8 +11,7 @@
         <p><%= @stage.address %></p>
         <p><i class="fa fa-users img_users" aria-hidden="true">   </i> capacity :<%= @stage.capacity %></p>
         <p> <i class="fa fa-money img_money" aria-hidden="true"></i> €<%= @stage.price %> per night</p>
-        <p class="small_stage_description">Une des salles de concert parmi les plus prestigieuses de la capitale. La salle de concert est aussi célèbre que les musiciens qui sont venus y faire un spectacle!</p>
-
+        <p class="small_stage_description">Une des salles de concert parmi les plus prestigieuses. La salle de concert est aussi célèbre que les musiciens qui sont venus y faire un spectacle!</p>
       </div>
     </div>
 
@@ -23,9 +22,12 @@
         </div>
 
         <%= simple_form_for([@stage, @booking], html: { class: 'booking-form' }) do |f| %>
-          <label for="Night of the Show" class = "label-booking">Check-In</label>
-          <%= f.input_field :date, as: :string, class: 'datepicker form-control', placeholder: 'Night of the Show' %>
-          <p> € <%= @stage.price %> x 1 night </p>
+          <p class="text-center">Check-In</p>
+          <p></p>
+          <%= f.input_field :date, as: :string, class: 'datepicker form-control text-center', placeholder: 'Night of the Show' %>
+          <p></p>
+          <p class="text-center"> € <%= @stage.price %> x 1 night </p>
+          <p class="text-center"> Total : € <%= @stage.price %> </p>
           <%= f.button :button %>
         <% end %>
       </div>

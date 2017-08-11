@@ -7,7 +7,7 @@
     <% @bookings.each do |booking| %>
       <div class="col-sm-4 col-xs-12">
         <div class="card-back">
-          <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://rocket-ticket.com//img/cms/Salle/olympia_paris_salle.jpg')">
+          <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= photo_url_for(booking.stage) %>')">
               <div>
                 <h4><%= booking.stage.name %></h4>
                 <p><%= booking.stage.address %></p>

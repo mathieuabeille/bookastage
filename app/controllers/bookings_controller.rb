@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     @stage = Stage.find(params[:stage_id])
     @booking.stage = @stage
     @booking.user = current_user
-
+    #booking save
     if @booking.save
       redirect_to root_path, notice: 'Booking created'
     else

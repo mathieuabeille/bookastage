@@ -24,7 +24,7 @@
         <% @stage.each do |stage| %>
           <div class="col-sm-4 ">
             <div class="card-fond">
-              <div class="card image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path stage.photo,  crop: :fill %>')">
+              <div class="card image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= photo_url_for(stage) %>')">
                 <div class="card-category"><%= stage.name %>
 
                 </div>

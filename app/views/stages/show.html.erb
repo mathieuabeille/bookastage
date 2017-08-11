@@ -1,8 +1,8 @@
 <div class="cardstage salle" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path @stage.photo,  crop: :fill %>')"> <h3><%= @stage.name %></h3><h4><%= @stage.city %></h4>
+         url('<%= photo_url_for(@stage) %>')"> <h3><%= @stage.name %></h3><h4><%= @stage.city %></h4>
 </div>
 
-
+<%= # %>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-8">

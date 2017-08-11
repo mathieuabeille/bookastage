@@ -33,12 +33,8 @@ class StagesController < ApplicationController
 
   def update
     @stage = Stage.find(params[:id])
-    @stage.user = current_user
-    if @stage.save
-      redirect_to stage_path(@stage)
-    else
-      render new
-    end
+    @stage.update(stage_params)
+    redirect_to stage_path(@stage)
   end
 
   # GET /stages/:id
@@ -48,9 +44,19 @@ class StagesController < ApplicationController
     @booking = Booking.new(date: @date)
   end
 
+  def mystage
+    @stage = current_user.stages
+  end
+
+  def destroy
+    @stage = Stage.find(params[:id])
+    @stage.destroy
+    redirect_to me_stage_path
+  end
+
   private
 
   def stage_params
-    params.require(:stage).permit(:name, :city, :description, :capacity, :price, :address)
+    params.require(:stage).permit(:name, :city, :description, :capacity, :price, :address, :photo, :photo_cache)
   end
 end

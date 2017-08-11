@@ -19,8 +19,11 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'bootstrap-datepicker-rails'
 gem "geocoder"
-gem "coffee-rails"
-gem "gmaps4rails"
+gem 'coffee-rails'
+gem 'gmaps4rails'
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
+
 
 group :development, :test do
   gem 'listen', '~> 3.0.5'

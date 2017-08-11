@@ -1,0 +1,54 @@
+
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= image_path('header.jpg') %>')">
+     <!--  <center>
+      <button  type="submit" class="btn btn-primary" >Add a stage</button>
+      </center> -->
+
+   <form action="<%= new_stage_path %>" method="get">
+      <div class="home-form">
+        <button type="submit" class="btn btn-primary">Add a stage</button>
+      </div>
+
+    </form>
+
+
+
+</div>
+
+<br/>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 contentresearch">
+      <div class="row">
+        <% @stage.each do |stage| %>
+          <div class="col-sm-4 ">
+            <div class="card-fond">
+              <div class="card image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path stage.photo,  crop: :fill %>')">
+                <div class="card-category"><%= stage.name %>
+
+                </div>
+              </div>
+              <div class="card-description">
+                <p><%= stage.city %>, Capacity: <%= stage.capacity %> people</p>
+                <p>$ <%= stage.price %></p>
+              </div>
+              <%= link_to '', stage_path(stage, date: params[:date]), class: 'card-link' %>
+            </div>
+
+
+               <%= link_to edit_stage_path(stage) do %>
+    <i class="fa fa-edit"></i> Edit
+   <% end %>
+
+</br>
+       <%= link_to stage_path(stage), method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <i class="fa fa-trash"></i> Delete
+   <% end %>
+          <br/><br/><br/>
+          </div>
+
+        <% end %>
+      </div>
+    </div>
+</div></div>

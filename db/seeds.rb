@@ -17,7 +17,8 @@ stages_attributes = [
     city: "Paris",
     price: 1000,
     capacity: 150,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 
   {
@@ -26,7 +27,8 @@ stages_attributes = [
     city: "Paris",
     price: 10000,
     capacity: 1996,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 
   {
@@ -35,7 +37,8 @@ stages_attributes = [
     city: "Paris",
     price: 8000,
     capacity: 1500,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 
   {
@@ -44,7 +47,8 @@ stages_attributes = [
     city: "Paris",
     price: 1000,
     capacity: 200,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 
   {
@@ -53,7 +57,8 @@ stages_attributes = [
     city: "Paris",
     price: 5000,
     capacity: 800,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 
   {
@@ -62,7 +67,8 @@ stages_attributes = [
     city: "Paris",
     price: 6000,
     capacity: 1200,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 
     {
@@ -71,7 +77,8 @@ stages_attributes = [
     city: "Paris",
     price: 6000,
     capacity: 1200,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 
   {
@@ -80,7 +87,8 @@ stages_attributes = [
     city: "Paris",
     price: 6000,
     capacity: 1200,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 
   {
@@ -89,7 +97,8 @@ stages_attributes = [
     city: "Lyon",
     price: 6000,
     capacity: 1200,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 
   {
@@ -98,8 +107,10 @@ stages_attributes = [
     city: "Lyon",
     price: 6000,
     capacity: 1200,
-    user: user
+    user: user,
+    remote_photo_url: "http://unsplash.it/300/300?random"
   },
 ]
 
+puts "Creating stages"
 Stage.create!(stages_attributes)

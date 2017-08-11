@@ -1,5 +1,7 @@
-<div class="card salle" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://rocket-ticket.com//img/cms/Salle/olympia_paris_salle.jpg')">
+<div class="cardstage salle" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @stage.photo,  crop: :fill %>')"> <h3><%= @stage.name %></h3><h4><%= @stage.city %></h4>
 </div>
+
 
 <div class="container">
   <div class="row">
@@ -10,6 +12,7 @@
         <p><i class="fa fa-users img_users" aria-hidden="true">   </i> capacity :<%= @stage.capacity %></p>
         <p> <i class="fa fa-money img_money" aria-hidden="true"></i> €<%= @stage.price %> per night</p>
         <p class="small_stage_description">Une des salles de concert parmi les plus prestigieuses de la capitale. La salle de concert est aussi célèbre que les musiciens qui sont venus y faire un spectacle!</p>
+
       </div>
     </div>
 

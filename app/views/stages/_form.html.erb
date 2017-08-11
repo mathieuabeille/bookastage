@@ -1,0 +1,26 @@
+<div id="padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3 boxlog">
+        <%= simple_form_for(@stage) do |f| %>
+            <div class="form-inputs">
+              <%= f.input :name, required: false, autofocus: true %>
+              <%= f.input :city %>
+              <%= f.input :description %>
+              <%= f.input :capacity %>
+              <%= f.input :price %>
+              <%= f.input :address %>
+              <%= f.input :photo %>
+              <%= f.input :photo_cache, as: :hidden %>
+            </div>
+
+            <div class="form-actions">
+              <%= f.button :submit, "Send" %>
+            </div>
+        <% end %>
+        </br>
+      </div>
+    </div>
+  </div>
+</br>
+</div>

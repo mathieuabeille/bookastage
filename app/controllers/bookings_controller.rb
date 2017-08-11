@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     #booking save
     if @booking.save
-      redirect_to root_path, notice: 'Booking created'
+      redirect_to bookings_path, notice: 'Booking created'
     else
       render 'stages/show'
     end
